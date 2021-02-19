@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryce's Hub</title>
+    <title>Bryce's Hub - Home</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -12,36 +12,114 @@
     <div class="container">
         
         <header>
-            <img src="pngjoy.com_electronics-icon-electronics-and-telecommunication-engineering-logo-png_5013324.png" alt="Logo for Bryce's Hub" style="width: 100px; height: 100px;">
+            <img src="images/pngjoy.com_electronics-icon-electronics-and-telecommunication-engineering-logo-png_5013324.png" alt="Logo for Bryce's Hub" style="width: 100px; height: 100px;">
         </header>
     
     
         <nav>
-            <a href="#">HOME</a>
-            <a href="#">EDUCATION</a>
-            <a href="#">PROJECTS</a>
-            <a href="#">HOBBIES</a>
-            <a href="https://365withbryce.wordpress.com" target="_blank">BLOG</a>
-            <a href="mailto:sisonbryce@gmail.com?Subject=Inquiry from Website">CONTACT</a>
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="index.html">HOME</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">ABOUT ME</a>
+                    </div>
+                    
+                    <div class="nav-link-wrapper">
+                        <a href="#">PROJECTS</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="#">HOBBIES</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="https://365withbryce.wordpress.com" target="_blank">BLOG</a>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <a href="mailto:sisonbryce@gmail.com?Subject=Inquiry from Website">CONTACT</a>
+                    </div>
+
+                </div>
+            </div>  
         </nav>
     
     
         <main>
-            <h1>BRYCE'S HUB</h1>
+            <div class="content-wrapper">
+                <div class="portfolio-items-wrapper">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/education.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/pngjoy.com_electronics-icon-electronics-and-telecommunication-engineering-logo-png_5013324.png" style="width: 100px; height: 100px;">
+                            </div>
+
+                            <div class="subtitle">
+                                <a href="#">Learn Mathematics, General Engineering and Applied Sciences, Electronics, and Electronic Systems and Technologies.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Projects.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/pngjoy.com_electronics-icon-electronics-and-telecommunication-engineering-logo-png_5013324.png" style="width: 100px; height: 100px;">
+                            </div>
+
+                            <div class="subtitle">
+                                <a href="#">Bring your knowledge to life! See some projects that will surely make you see what you learned!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/Hobbies.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/pngjoy.com_electronics-icon-electronics-and-telecommunication-engineering-logo-png_5013324.png" style="width: 100px; height: 100px;">
+                            </div>
+
+                            <div class="subtitle">
+                                <a href="#">See some cool and awesome projects that you can make on your own free time!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+
+
+            <!-- <h1>BRYCE'S HUB</h1>
             <h2>Mathematics. Sciences. Electronics. Communications.</h2>
-            <p>Welcome to my website! Feel free to browse around!</p>
+            <p>Welcome to my website! Feel free to browse around!</p> -->
         </main>
-    
-        <section class="videopreview">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9y3tLit5AG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-
-
-    
+ 
         <footer>
-            <p>First Deployed on 18 February 2021</p>
+            <p>All Rights Reserved ™ ® February 2021</p>
         </footer>
 
     </div>
 </body>
+
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+
+    })
+</script>
 </html>
