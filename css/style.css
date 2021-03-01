@@ -5,12 +5,101 @@
 
 /* css variables */
 
-@import url(partials/_variables.css);
+@import url(partials/variables.css);
 
 /* import global styling */
-@import url(partials/_global.css);
+@import url(partials/global.css);
 
 
+/* intro */
+.wrapper {
+    height: 58vh;
+    width: 80vw;
+    margin: 1rem auto;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    box-shadow: 1px 3px 20px rgb(21, 15, 66);
+    border-radius: .2rem;
+    position: relative;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    height: 100%;
+}
+
+.container1 .title{
+    width: 90%;
+    height: 20%;
+    text-align: center;
+    padding: 2rem;
+    margin: 9rem 0;
+}
+
+.container1 h1{
+    font: normal bold 30px/100px var(--roboto);
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.container1 p{
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+}
+
+.night{
+    height: 560px;
+    width: 700px;
+    background:url('/images/intro/27.jpg');  
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.surface{
+  height: 140px;
+  width: 500%;
+  display: block;
+  background:url('/images/intro/Img_02.png');
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background-repeat: repeat-x;
+}
+
+.moveRight{
+  animation: moveRight 6s linear infinite;
+}
+
+@keyframes moveRight{
+  100%{
+    transform: translateX(-2950px);
+  }
+}
+
+/* Made Changes */
+.car{
+  position: absolute;
+  bottom: 43px;
+  left: 24%;
+}
+
+.suspension{
+  animation: suspension 1s linear infinite;
+}
+
+@keyframes suspension{
+  100%{transform: translateY(-1px);}
+  50%{transform: translateY(2px);}
+  0%{transform: translateY(-1px);}
+}
+
+.clip-svg{
+    clip-path: url(#myClip);
+}
+
+/* intro */
 
 /* Start Navigation */
 
